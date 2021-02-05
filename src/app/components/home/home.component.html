@@ -1,0 +1,10 @@
+<div class="container animated fadeIn">
+  <div class="row col-12 shadow p-3  bg-white rounded">
+    <h3 class="display-4">Nuevos lanzamientos</h3>
+
+  </div>
+
+  <app-loading class="row col-12" *ngIf="loading"></app-loading>
+
+</div>
+<app-tarjetas [items]="newReleases" *ngIf="!loading" ></app-tarjetas>

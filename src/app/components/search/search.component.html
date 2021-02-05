@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col mt-4">
+        <input type="text" name="buscador" id="buscador" placeholder="...Dua Lipa, Justin Bieber, Ed Sheran"
+        (keyup)="buscarArtista(termino.value)" class="form-control" #termino>
+  </div>
+</div>
+<app-loading class="row col-12" *ngIf="loading"></app-loading>
+
+
+<app-tarjetas [items]="artistaBuscado" *ngIf="!loading"></app-tarjetas>
